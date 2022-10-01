@@ -85,9 +85,10 @@ public class LinkedList<K> {
   //deleted node after a given node
   public boolean delete(K itemToDelete){
     INode<K> foundNode = this.search(itemToDelete);
-    log.info("deleting item "+itemToDelete+" in list 6");
+    log.info("deleting item "+itemToDelete );
     INode<K> firstNode=null;
     INode<K> secondNode=head;
+    // System.out.println(foundNode);
     //search the node if found then change linkages of previous and next node
     if(foundNode!=null){
       while (secondNode!=null&&!secondNode.getKey().equals(foundNode.getKey())) {
@@ -110,6 +111,7 @@ public class LinkedList<K> {
     if (this.isEmpty())
       return null;
     while (temp != null) {
+      // log.info(temp.getKey());
       if (temp.getKey().equals(item)) {
         return temp;
       }

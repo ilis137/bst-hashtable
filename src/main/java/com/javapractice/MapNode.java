@@ -12,12 +12,12 @@ public class MapNode<K, V> implements INode<K> {
         next =null;
     }
 
-    
+    @Override
     public K getKey() {
         return key;
     }
 
-    
+    @Override
     public void setKey(K key) {
         this.key = key;
     }
