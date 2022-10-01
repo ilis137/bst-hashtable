@@ -125,15 +125,12 @@ public class LinkedList<K> {
     }
     INode<K> temp = head;
     while (temp != null) {
-      StringBuilder myMapNodeString = new StringBuilder();
+      StringBuilder MapNodeString = new StringBuilder();
       String key=(String)temp.getKey();
       int value=(int)((MapNode)temp).getValue();
-        myMapNodeString.append(key)
+        MapNodeString.append(key)
                 .append(" | ").append(value);
-       /*  if (temp.getNext() != null)
-            myMapNodeString.append("->");
-      */
-      log.info(myMapNodeString);
+      log.info(MapNodeString);
       temp = temp.getNext();
     }
   }

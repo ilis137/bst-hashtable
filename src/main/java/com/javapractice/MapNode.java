@@ -40,13 +40,5 @@ public class MapNode<K, V> implements INode<K> {
         this.next = (MapNode<K,V>)next;
     }
 
-    public String toString(){
-        StringBuilder myMapNodeString = new StringBuilder();
-        myMapNodeString.append("MyMapNode{" + "Key is ='").append(key)
-                .append("' and Value is='").append(value).append("'}");
-        if (next != null)
-            myMapNodeString.append("->").append(next);
-        return myMapNodeString.toString();
-
-    }
+ 
 }

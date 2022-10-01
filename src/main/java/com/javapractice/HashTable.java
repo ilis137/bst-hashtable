@@ -1,7 +1,5 @@
 package com.javapractice;
 
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
 
 public class HashTable<K, V> {
     LinkedList<K> list;
@@ -12,20 +10,20 @@ public class HashTable<K, V> {
     }
     //get the value of said key
     public V get(K key) {
-        MapNode<K,V> myMapNode = (MapNode<K,V>)list.search(key);
-        return (myMapNode == null) ? null : myMapNode.getValue();
+        MapNode<K,V> MapNode = (MapNode<K,V>)list.search(key);
+        return (MapNode == null) ? null : MapNode.getValue();
     }
     //find the node in linkedlist and if found update it or create new one.
     public void add(K key, V value) {
-        MapNode<K,V> myMapNode = (MapNode<K, V>) this.list.search(key);
-        if (myMapNode == null){
-            myMapNode = new MapNode<>(key,value);
-            this.list.append(myMapNode);
+        MapNode<K,V> MapNode = (MapNode<K, V>) this.list.search(key);
+        if (MapNode == null){
+            MapNode = new MapNode<>(key,value);
+            this.list.append(MapNode);
         }else {
-            myMapNode.setValue(value);
+            MapNode.setValue(value);
         }
     }
-
+    //print hash table
     public void print(){
     list.printMapNodes();
     }
